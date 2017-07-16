@@ -153,8 +153,10 @@ function showHideAll() {
 if (isset($_GET['page']) && ($_GET['page'] > 1)) $rows = $_GET['page'] * MAX_DISPLAY_SEARCH_RESULTS_REPORTS - MAX_DISPLAY_SEARCH_RESULTS_REPORTS;
 $rows = 0;
 $products_query_raw = 
-    "SELECT distinct pn.products_id, pd.products_name
+    "SELECT distinct pn.products_id, pd.products_name, p.products_type, p.products_model, p.master_categories_id
        FROM " . TABLE_PRODUCTS_NOTIFICATIONS . " pn
+            LEFT JOIN " . TABLE_PRODUCTS . " p 
+                ON (pn.products_id = p.products_id)
             LEFT JOIN " . TABLE_PRODUCTS_DESCRIPTION . " pd 
                 ON (pn.products_id = pd.products_id)
       WHERE pd.language_id = " . $_SESSION['languages_id'] . "
@@ -190,7 +192,7 @@ while (!$products->EOF) {
 ?>
                             <tr class="dataTableRow" onmouseover="rowOverEffect(this);" onmouseout="rowOutEffect(this);">
                                 <td class="dataTableContent right"><?php echo $products->fields['products_id']; ?>&nbsp;&nbsp;</td>
-                                <td class="dataTableContent left"><?php echo '<a href="' . zen_href_link(FILENAME_CATEGORIES, 'cPath=' . $cPath . '&pID=' . $products->fields['products_id']) . '">' . $products->fields['products_name'] . '</a>'; ?></td>
+                                <td class="dataTableContent left"><a href="<?php echo zen_href_link(zen_get_handler_from_type($products->fields['products_type']), 'cPath=' . $products->fields['master_categories_id'] . '&product_type=' . $products->fields['products_type'] . "&pID=$products_id&action=new_product"); ?>" target="_blank"><?php echo '[' . $products->fields['products_model'] . '] ' . $products->fields['products_name']; ?></a></td>
                                 <td class="dataTableContent center"><?php echo $customers_count->fields['count']; ?>&nbsp;<?php $showHide_cnt++; ?>
                                     <a href="javascript:showHide('<?php echo $showHide_cnt; ?>');">
                                         <span id="showHide_on_<?php echo $showHide_cnt; ?>" style="display: inline;"><?php echo zen_image(DIR_WS_IMAGES . 'icon_plus.gif'); ?>&nbsp;<?php echo TEXT_SHOWHIDE_SHOW; ?></span>

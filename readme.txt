@@ -4,7 +4,7 @@ Products Notifications Report
 
 Version Date
 ==============
-2.0.0, 2017-07-16 (lat9)
+2.0.1, 2017-07-16 (lat9)
 
 Author
 ======
@@ -66,6 +66,8 @@ DELETE FROM admin_pages WHERE page_key = 'reportsProductsNotifications' LIMIT 1;
 
 History
 =======
+2.0.1   2017-07-16  lat9
+  - Updated to correct the product-page link, per the support forum.
 2.0.0   2017-07-16  lat9
   - Updated for continued use under Zen Cart 1.5.0 and later.
 3. 1.3 24.04.2007 14:36 (a_berezin)

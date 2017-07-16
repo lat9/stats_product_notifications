@@ -10,6 +10,8 @@
 
 define('HEADING_TITLE', 'Products Notifications');
 
+define('INSTRUCTIONS', 'This report lists the products in your store for which customers have signed-up for notifications.  Click the &quot;Show&quot; link next to a product to view the customers that have registered for that product\'s notifications.<br /><br />Click on the customer-name link to view the details of that customer; click on the email-address link to send an email to that customer.<br /><br /><strong>Note:</strong> Clicking a link will open a <em>new window</em> with the requested information.');
+
 define('TABLE_HEADING_NUMBER', 'ID#');
 define('TABLE_HEADING_PRODUCTS', 'Products');
 define('TABLE_HEADING_VIEWED', 'Count');
@@ -18,5 +20,3 @@ define('TEXT_SHOWHIDE_HIDE_ALL', 'Hide all');
 define('TEXT_SHOWHIDE_SHOW_ALL', 'Show all');
 define('TEXT_SHOWHIDE_HIDE', 'Hide');
 define('TEXT_SHOWHIDE_SHOW', 'Show');
-
-?>

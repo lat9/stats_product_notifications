@@ -4,11 +4,12 @@ Products Notifications Report
 
 Version Date
 ==============
-1.3 24.04.2007 14:36
+2.0.0, 2017-07-16 (lat9)
 
 Author
 ======
 Andrew Berezin andrew@ecommerce-service.com http://ecommerce-service.com andrew@zen-cart.spb.ru http://zen-cart.spb.ru
+Modified by Cindy Merkin (lat9) for continued use under Zen Cart 1.5.0+
 
 Description
 ===========
@@ -26,14 +27,17 @@ Changed files
 
 New files
 ---------
-admin/stats_products_notifications.php
-admin/includes/boxes/extra_boxes/stats_products_notifications_reports_dhtml.php
-admin/includes/languages/english/extra_definitions/stats_products_notifications.php
-admin/includes/languages/english/stats_products_notifications.php
+YOUR_ADMIN/stats_products_notifications.php
+YOUR_ADMIN/includes/extra_datafiles/stats_products_notifications_filename.php
+YOUR_ADMIN/includes/functions/extra_functions/init_products_notifications_report.php
+YOUR_ADMIN/includes/languages/english/extra_definitions/stats_products_notifications.php
+YOUR_ADMIN/includes/languages/english/stats_products_notifications.php
+YOUR_ADMIN/includes/languages/russian/extra_definitions/stats_products_notifications.php
+YOUR_ADMIN/includes/languages/russian/stats_products_notifications.php
 
 Affects DB
 ==========
-- none -
+- v2.0.0 (and later) add a record to the admin_pages table, registering the plugin for menu display.
 
 Features:
 =========
@@ -47,16 +51,25 @@ Install:
 
 Uninstall
 =========
-Delete this files:
-admin/stats_products_notifications.php
-admin/includes/boxes/extra_boxes/stats_products_notifications_reports_dhtml.php
-admin/includes/languages/english/extra_definitions/stats_products_notifications.php
-admin/includes/languages/english/stats_products_notifications.php
+Delete these files:
+YOUR_ADMIN/stats_products_notifications.php
+YOUR_ADMIN/includes/extra_datafiles/stats_products_notifications_filename.php
+YOUR_ADMIN/includes/functions/extra_functions/init_products_notifications_report.php
+YOUR_ADMIN/includes/languages/english/extra_definitions/stats_products_notifications.php
+YOUR_ADMIN/includes/languages/english/stats_products_notifications.php
+YOUR_ADMIN/includes/languages/russian/extra_definitions/stats_products_notifications.php
+YOUR_ADMIN/includes/languages/russian/stats_products_notifications.php
+
+and copy & paste the following into your admin's Tools->Install SQL Patches:
+
+DELETE FROM admin_pages WHERE page_key = 'reportsProductsNotifications' LIMIT 1;
 
 History
 =======
-0. Initial version - 1.0 19.02.2007 6:41
-3. 1.3 24.04.2007 14:36
+2.0.0   2017-07-16  lat9
+  - Updated for continued use under Zen Cart 1.5.0 and later.
+3. 1.3 24.04.2007 14:36 (a_berezin)
+0. Initial version - 1.0 19.02.2007 6:41 (a_berezin)
 
 
 DISCLAIMER

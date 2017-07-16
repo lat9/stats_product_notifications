@@ -13,11 +13,11 @@ define('HEADING_TITLE', 'Products Notifications');
 define('INSTRUCTIONS', 'This report lists the products in your store for which customers have signed-up for notifications.  Click the &quot;Show&quot; link next to a product to view the customers that have registered for that product\'s notifications.<br /><br />Click on the customer-name link to view the details of that customer; click on the email-address link to send an email to that customer.<br /><br /><strong>Note:</strong> Clicking a link will open a <em>new window</em> with the requested information.');
 
 define('TABLE_HEADING_NUMBER', 'ID#');
-define('TABLE_HEADING_PRODUCTS', 'Товары');
-define('TABLE_HEADING_VIEWED', 'Кол-во подписчиков');
+define('TABLE_HEADING_PRODUCTS', 'РўРѕРІР°СЂС‹');
+define('TABLE_HEADING_VIEWED', 'РљРѕР»-РІРѕ РїРѕРґРїРёСЃС‡РёРєРѕРІ');
 
-define('TEXT_SHOWHIDE_HIDE_ALL', 'Скрыть все');
-define('TEXT_SHOWHIDE_SHOW_ALL', 'Показать все');
-define('TEXT_SHOWHIDE_HIDE', 'Скрыть');
-define('TEXT_SHOWHIDE_SHOW', 'Показать');
+define('TEXT_SHOWHIDE_HIDE_ALL', 'РЎРєСЂС‹С‚СЊ РІСЃРµ');
+define('TEXT_SHOWHIDE_SHOW_ALL', 'РџРѕРєР°Р·Р°С‚СЊ РІСЃРµ');
+define('TEXT_SHOWHIDE_HIDE', 'РЎРєСЂС‹С‚СЊ');
+define('TEXT_SHOWHIDE_SHOW', 'РџРѕРєР°Р·Р°С‚СЊ');
  
